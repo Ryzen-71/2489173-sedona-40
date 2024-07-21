@@ -39,6 +39,137 @@ img {
   overflow: hidden;
 }
 
+:root {
+  /* Texst colors */
+  --text-color-basis:#000000;
+  --text-color-second:#333333;
+  --text-color-default:#FFFFFF;
+  --text-color-small:rgba(255, 255, 255, 0.3);
+  --text-color-error:#FF5757;
+
+  /* Button colors */
+  --button-color-basic:#756157;
+  --button-color-second:#82B3D3;
+  --button-color-select:#7DB54F;
+
+  /* Background colors */
+  --background-color-default:#FFFFFF;
+  --background-color-basic:#82B3D3;
+  --background-color-second-1:rgba(131, 179, 211, 0.12);
+  --background-color-second-2:rgba(131, 179, 211, 0.2);
+  --background-color-body:#F2F2F2;
+
+  /* Icons colors */
+  --icon-color-basic:#000000;
+  --icon-color-second:#83B3D3;
+  --icon-color-select:#7DB54F;
+
+  /* Form colors */
+  --form-color-input:#3F5E72;
+  --form-color-elements-1:#E5E5E5;
+  --form-color-elements-2:#F2F2F2;
+}
+
+/* Typography */
+
+/* Typography heading */
+.heaiding-1 {
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+.heaiding-2 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.heaiding-3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.heaiding-3-lower-case {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+}
+
+.heaiding-4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+
+/* Typography buttons */
+.button-big {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-small {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-small-regular {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.button-small-lower-case {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  border: none;
+}
+
+/* Typography texts */
+.text-phone {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
+}
+
+.text-blocks {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.text-small {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+.text-basic {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26px;
+}
+
+.text-input {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
 html {
   height: 100%;
 }
@@ -46,9 +177,9 @@ html {
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
-  color: #000000;
+  color: var(--text-color-basis);
   line-height: 21px;
-  background-color: #F2F2F2;
+  background-color: var(--background-color-body);
   margin: 0;
   height: 100%;
 }
@@ -56,7 +187,7 @@ body {
 .wrap {
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
+  background-color: var(--background-color-default);
   margin: 0 auto;
   width: 1200px;
   min-height: 100%;
@@ -167,12 +298,12 @@ body {
 
 .button-counter {
   position: absolute;
-  color: rgb(255, 255, 255);
+  color: var(--text-color-default);
   font-size: 10px;
   line-height: 10px;
   text-align: center;
   border-radius: 50%;
-  background: rgb(125, 181, 79);
+  background: var(--icon-color-select);
   top: 3px;
   right: 3px;
   padding: 4px;
@@ -230,7 +361,7 @@ body {
 }
 
 .hero {
-  background: rgb(106 151 183);
+  background: #6a97b7;
   background: url("../images/main-background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -263,7 +394,6 @@ body {
   row-gap: 25px;
   padding-top: 69px;
   padding-bottom: 90px;
-
 }
 
 .advantages-list {
@@ -328,15 +458,11 @@ body {
 }
 
 .section-title {
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
   margin: 0;
 }
 
 .section-description {
-  color: #333333;
+  color: var(--text-color-second);
   font-size: 22px;
   line-height: 26px;
   margin: 0;
@@ -344,10 +470,6 @@ body {
 
 .advantages-title {
   position: relative;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  text-transform: uppercase;
   margin: 0;
   margin-bottom: 30px;
   word-break: break-word;
@@ -368,21 +490,17 @@ body {
 }
 
 .advantages-description {
-  color: #333333;
+  color: var(--text-color-second);
 }
 
 .advantages-item-picture {
-  background-color: #83B3D3;
+  background-color: var(--background-color-basic);
   width: 1200px;
   display: flex;
 }
 
 .advantages-item-picture .advantages-title {
-  color: #FFFFFF;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 28px;
-  text-transform: uppercase;
+  color: var(--text-color-default);
 }
 
 .service {
@@ -452,7 +570,7 @@ body {
 }
 
 .advantages-item-picture .advantages-description {
-  color: rgb(255, 255, 255);
+  color: var(--text-color-default);
   margin: 0;
 }
 
@@ -511,7 +629,7 @@ body {
   padding: 14px 20px;
   border-radius: 4px 0 0 4px;
   border: none;
-  background: rgb(242, 242, 242);
+  background: var(--form-color-elements-2);
   height: 100%;
 }
 
@@ -525,7 +643,7 @@ body {
 
 .subscribe-main {
   display: flex;
-  color: #ffffff;
+  color: var(--text-color-default);
   background-image: url("../images/background-subscribe.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -534,11 +652,11 @@ body {
 }
 
 .subscribe-main .section-description {
-  color: #FFFFFF;
+  color: var(--text-color-default);
 }
 
 .wrapper-filter {
-  color:#FFFFFF;
+  color: var(--text-color-default);
   background-image: url("../images/background-filter.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -631,7 +749,7 @@ body {
 }
 
 .filter-column:first-of-type .filter-catalog-group:first-of-type{
-  margin-right: 4px;
+  margin-right: 2px;
 }
 
 .filter-catalog-group {
@@ -665,7 +783,7 @@ body {
 }
 
 .price-range {
-  color: rgb(0, 0, 0);
+  color: var(--text-color-basis);
   font-family: inherit;
   font-size: 18px;
   font-weight: 400;
@@ -681,7 +799,7 @@ body {
 }
 
 .range-input {
-  color: rgb(0, 0, 0);
+  color: var(--text-color-basis);
   font-family: inherit;
   font-weight: 700;
   line-height: 24px;
@@ -689,7 +807,7 @@ body {
   grid-row: 1 / 2;
   padding: 12px 20px;
   padding-right: 55px;
-  background: rgb(242, 242, 242);
+  background: var(--form-color-elements-2);
   font-size: 18px;
   width: 143px;
   border: none;
@@ -725,13 +843,13 @@ body {
   position: relative;
   height: 4px;
   margin-top: 29px;
-  background-color:  rgba(255, 255, 255,0.3);
+  background-color: rgba(255, 255, 255,0.3);
 }
 
 .range-bar {
   position: absolute;
   height: 4px;
-  background-color:  rgb(255, 255, 255);
+  background-color:var(--background-color-default);
 }
 
 .range-toggle {
@@ -787,7 +905,7 @@ body {
   left: 0;
   width: 20px;
   height: 20px;
-  background: rgb(255, 255, 255);
+  background: var(--background-color-default);
   border-radius: 5px ;
 }
 
@@ -842,9 +960,6 @@ body {
 
 .filter-catalog-title {
   padding: 0;
-  font-size: 20px;
-  line-height: 24px;
-  text-transform: capitalize;
   margin-bottom: 32px;
 }
 
@@ -919,10 +1034,9 @@ body {
 }
 
 .select-control {
-  color: rgb(51, 51, 51);
+  color: #333333;
   font-family: inherit;
-  font-size: 18px;
-  line-height: 21px;
+
   margin-right: 70px;
   min-width: 292px;
   align-self: center;
@@ -1001,7 +1115,7 @@ body {
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-template-columns: repeat(3,340px)  ;
+  grid-template-columns: repeat(3,340px);
   column-gap: 20px;
   row-gap: 18px;
   margin-bottom:80px;
@@ -1012,7 +1126,7 @@ body {
   content: "";
   width: 1060px;
   height: 1px;
-  background-color:rgb(230, 230, 230);;
+  background-color:rgb(230, 230, 230);
   bottom: -40px;
 }
 
@@ -1025,7 +1139,7 @@ body {
 }
 
 .card-link {
-  color: #000000;
+  color: var(--text-color-basis);
   text-decoration: none;
 }
 
@@ -1036,15 +1150,13 @@ body {
 
 .card-title {
   margin: 0;
-  font-size: 24px;
-  line-height: 28px;
 }
 
 .card-description {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  color:  #333333;
+  color:  var(--text-color-second);
   margin-top: auto;
 }
 
@@ -1096,13 +1208,13 @@ body {
 }
 
 .rating {
-  color: #333333;
+  color: var(--text-color-second);
   font-size: 16px;
   text-transform: uppercase;
   min-width: 140px;
   padding: 9px 22px 8px 23px;
   border-radius: 4px;
-  background: rgb(242, 242, 242);
+  background: var(--form-color-elements-2);
   text-align: center;
   max-width: 140px;
 }
@@ -1126,13 +1238,10 @@ body {
   min-width: 60px;
   height: 60px;
   padding:11px 5px 13px ;
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 36px;
+  color: var(--text-color-default);
   text-decoration: none;
   text-transform: uppercase;
-  background-color: #82B3D3;
+  background-color: var(--background-color-basic);
   border-radius: 4px;
 }
 
@@ -1152,8 +1261,8 @@ body {
 }
 
 .pagination-current .pagination-link {
-  color: rgb(0, 0, 0);
-  background-color: #F2F2F2;
+  color: var(--text-color-basis);
+  background-color: var(--background-color-body);
   font-size: 20px;
   font-weight: 700;
   line-height: 36px;
@@ -1162,21 +1271,16 @@ body {
 }
 
 .pagination-link-points .pagination-link {
-  color: #000000;
+  color: var(--text-color-basis);
   background-color: transparent;
 }
 
 .button {
-  color: #FFFFFF;
-  background-color: #83B3D3;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 20px;
+  color: var(--text-color-default);
+  background-color: var(--button-color-second);
   text-decoration: none;
-  text-transform: uppercase;
   cursor: pointer;
   border-radius: 4px;
-  border:none;
   font-family: inherit;
   word-break: break-word;
 }
@@ -1208,11 +1312,6 @@ body {
   padding: 7px 50px;
 }
 
-.button-big {
-  font-size: 20px;
-  line-height: 36px;
-}
-
 .button-big:hover {
   background: rgb(104, 162, 202);
 }
@@ -1227,7 +1326,7 @@ body {
 }
 
 .button-green {
-  background-color:  #7DB54F;
+  background-color: var(--button-color-select);
   min-width:140px;
   padding: 8px 18px;
 }
@@ -1303,11 +1402,7 @@ body {
 
 .footer-phone {
   color: inherit;
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 40px;
   text-align: center;
-  text-transform: uppercase;
   text-decoration: none;
 }
 
@@ -1363,7 +1458,7 @@ body {
   position: relative;
   margin: auto ;
   padding: 64px 70px;
-  background-color: #ffffff;
+  background-color: var(--background-color-default);
   border-radius: 30px;
   box-shadow: 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
@@ -1379,7 +1474,7 @@ body {
   right: 51px;
   width: 52px;
   height: 52px;
-  background: rgb(242, 242, 242);
+  background: var(--background-color-body);
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -1412,17 +1507,13 @@ body {
 .modal-title {
   margin: 0;
   margin-bottom: 64px;
-  color: rgb(0, 0, 0);
+  color: var(--text-color-basis);
   font-family: "PT Sans" , sans-serif;;
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 36px;
-  text-transform: uppercase;
   padding-right: 33px;
 }
 
 .modal-content-ttile {
-  color: rgb(0, 0, 0);
+  color: var(--text-color-basis);
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
@@ -1497,7 +1588,7 @@ body {
 
 .visiting-adults-input {
   width: 100%;
-  color: rgb(0, 0, 0);
+  color: var(--text-color-basis);
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
@@ -1510,7 +1601,7 @@ body {
 }
 
 .number-field {
-  color: rgb(0, 0, 0);
+  color: var(--text-color-basis);
   font-size: 18px;
   font-weight: 700;
   line-height: 20px;
@@ -1518,7 +1609,7 @@ body {
   font-family: inherit;
   max-width: 110px;
   border-radius: 4px;
-  background: rgb(242, 242, 242);
+  background: var(--background-color-body);
   padding: 14px 10px;
   border: none;
 }
@@ -1614,7 +1705,7 @@ body {
 }
 
 .modal-content-button {
-  color: rgb(255, 255, 255);
+  color: var(--text-color-default);
   font-family: inherit;
   font-size: 20px;
   font-weight: 700;
@@ -1624,7 +1715,7 @@ body {
   margin-top: 25px;
   border-radius: 10px;
   padding: 18px 77px;
-  background-color: rgb(131, 179, 211);
+  background-color: var(--background-color-basic);
   border: none;
   cursor: pointer;
 }
@@ -1655,7 +1746,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 50%;
-  background-color: rgb(131, 179, 211);
+  background-color: var(--background-color-basic);
 }
 
 .information-children:hover .information-children-text {
@@ -1674,7 +1765,7 @@ body {
   display: none;
   width: 256px;
   padding: 15px 18px 18px 22px;
-  color: #ffffff;
+  color: var(--text-color-default);
   background-color: #333333;
   border-radius: 10px;
   font-size: 16px;
